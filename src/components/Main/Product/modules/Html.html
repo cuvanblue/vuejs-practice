@@ -1,0 +1,11 @@
+<div class="product">
+    <a class="product-thumbnail">
+        <img class="thumbnail" :src="thumbnailUrl" alt="product-image">
+    </a>
+    <div class="description">
+        <span class="product-name">{{ title }}</span>
+        <span class="product-price">{{ price }}</span>
+        <span class="product-status">{{ status }}</span>
+        <button @click="this.$store.commit('increment')">add to cart</button>
+    </div>
+</div>
