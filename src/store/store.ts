@@ -10,12 +10,15 @@ export const store = createStore({
         }
     },
     mutations: {
-        async increment(state) {
-            //mô phỏng gọi api check product status ....
-            setTimeout(() => {
-                state.cartProductsCount++
+        increment(state, number) {
+            state.cartProductsCount += number;
+        }
+    },
+    actions: {
+        async increment(context) {
+            await setTimeout(() => {
+                context.commit('increment', 1);
             }, 1000);
-
         }
     }
 })

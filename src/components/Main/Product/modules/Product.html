@@ -6,6 +6,9 @@
         <span class="product-name">{{ title }}</span>
         <span class="product-price">{{ price }}</span>
         <span class="product-status">{{ status }}</span>
-        <button @click="this.$store.commit('increment')">add to cart</button>
+        <input type="number" name="" id="" :ref="id">
+        <button @click="addProductsToCart(id)">add to cart</button>
+        <button @click="this.$store.commit('increment', 1) ">add to cart Mutation</button>
+        <button @click="this.$store.dispatch('increment', 1) ">add to cart Action</button>
     </div>
 </div>

@@ -3,8 +3,9 @@ import CategoryMenuRow from './CategoryMenuRow.vue';
 import AsideTitle from './AsideTitle.vue';
 import BestSellerItem from './BestSellerItem.vue';
 import Product from './Product/Product.vue';
-import { onMounted } from 'vue';
 import testDataBase from '../../../testDataBase.json';
+import { onBeforeMount, onMounted, onRenderTracked } from 'vue';
+
 </script>
 
 <template>
@@ -169,37 +170,37 @@ import testDataBase from '../../../testDataBase.json';
                         </div>
                         <div class="products product-new">
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="1" />
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="2" />
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="3" />
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="4" />
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="5" />
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="6" />
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="7" />
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="8" />
                         </div>
                         <div class="products product-hot" style="opacity: 0;">
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc1.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/lkpc1.jfif" status="Sẵn hàng" id="9" />
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc3.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/lkpc3.jfif" status="Sẵn hàng" id="10" />
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc1.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/lkpc1.jfif" status="Sẵn hàng" id="11" />
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="12" />
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="13" />
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="14" />
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="15" />
                         </div>
                     </div>
                     <!-- Thiết bị mạng -->
@@ -211,13 +212,13 @@ import testDataBase from '../../../testDataBase.json';
                         </div>
                         <div class="products">
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/sanpham1.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/sanpham1.jfif" status="Sẵn hàng" id="16" />
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/sanpham1.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/sanpham1.jfif" status="Sẵn hàng" id="17" />
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/sanpham1.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/sanpham1.jfif" status="Sẵn hàng" id="18" />
                             <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/sanpham1.jfif" status="Sẵn hàng" />
+                                thumbnailUrl="img/sanpham1.jfif" status="Sẵn hàng" id="19" />
                         </div>
                     </div>
                 </div>
