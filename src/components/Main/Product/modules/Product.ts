@@ -20,6 +20,7 @@ export default {
     },
     methods: {
         addProductsToCart(id) {
+            this.incrementMutation(parseInt(id));
             console.log('toi duoc goi' + id);
         },
         ...mapMutations({
