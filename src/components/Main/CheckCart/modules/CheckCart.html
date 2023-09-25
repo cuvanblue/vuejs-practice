@@ -1,0 +1,49 @@
+<div class="check-cart">
+    <div class="checkcart-header">
+        <img class="left" src="img/left-bg-heading.png" alt="left-bg-heading">
+        <h2><strong>GIỎ HÀNG</strong></h2>
+        <img class="right" src="img/right-bg-heading.png" alt="red-triangle">
+    </div>
+    <div v-if="!cartProducts" class="main no-product-cart">
+        <h4>Chưa có sản phẩm nào trong giỏ hàng!</h4>
+        <p>Xin quý vui long chọn sản phẩm.</p>
+        <router-link to="/"><button class="home-button">QUAY LẠI TRANG CHỦ</button></router-link>
+    </div>
+    <div v-if="cartProducts !== false" class="main">
+        <table class="list-product">
+            <thead>
+                <tr>
+                    <td class="check-cart-product-remove">&nbsp;</td>
+                    <td class="check-cart-product-thumbnail">&nbsp;</td>
+                    <td class="check-cart-product-title">Sản phẩm </td>
+                    <td class="check-cart-product-price">Giá</td>
+                    <td class="check-cart-product-quanity">Số lượng </td>
+                    <td class="check-cart-product-sumary">Tổng</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="product in cartProducts" :title="product.title" :price="product.price"
+                    :thumbnailUrl="product.thumbnailUrl" :quanity="product.quanity" :id="product.id">
+                    <td class="check-cart-product-remove"><button @click="removeProduct(product.id)">×</button></td>
+                    <td class="check-cart-product-thumbnail"><img :src="product.thumbnailUrl" alt="cart product"></td>
+                    <td class="check-cart-product-title">{{product.title}}</td>
+                    <td class="check-cart-product-price">{{vnd(product.price)}}</td>
+                    <td class="check-cart-product-quanity">
+                        <button @click="changeAmountProducts(product.id, -1)">-</button>
+                        <input type="number" :value="product.count" min="0" readonly>
+                        <button @click="changeAmountProducts(product.id, 1)">+</button>
+                    </td>
+                    <td class="check-cart-product-sumary">{{vnd(product.sumary)}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="sumary">
+            <h4>Tổng</h4>
+            <div style="border: 1px solid #ccc; margin-bottom: 10px;">
+                <span>Tổng:</span>
+                <span>{{vnd(getSumPrice)}}</span>
+            </div>
+            <router-link to="/check-cart/check-out">Thanh toán</router-link>
+        </div>
+    </div>
+</div>

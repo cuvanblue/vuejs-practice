@@ -42,10 +42,27 @@
     font-weight: 600;
     text-align: right;
 }
-
-.product-status {
+.product-status{
+    margin: 5px 7.5%;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+.product-status  span{
     color: #D92037;
     font-size: 1.6em;
     font-weight: 600;
     text-align: right;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+.product-status button{
+    background-color: transparent;
+    border:  none;
+    cursor: pointer;
+}
+.product-status img{
+    width: 30px;
+    height: auto;
 }

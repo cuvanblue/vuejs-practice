@@ -38,10 +38,13 @@
                         <button type="submit"><img src="img/search-icon.svg" alt="search-icon"></button>
                     </form>
                 </div>
-                <div class="cart">
-                    <a href=""><span class="counter">{{ cartProductsCount }}</span><img src="img/cart.png"
-                            alt="cart-icon"></a>
-                </div>
+                <router-link to="/check-cart">
+                    <div class="cart">
+                        <a href=""><span class="counter">{{ cart.count }}</span><img src="img/cart.png"
+                                alt="cart-icon"></a>
+                    </div>
+                </router-link>
+
             </div>
         </div>
     </div>

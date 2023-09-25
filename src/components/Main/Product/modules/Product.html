@@ -1,14 +1,18 @@
 <div class="product">
-    <a class="product-thumbnail">
-        <img class="thumbnail" :src="thumbnailUrl" alt="product-image">
-    </a>
+    <router-link :to="'/product-detail/' + id">
+        <a class="product-thumbnail">
+            <img class="thumbnail" :src="thumbnailUrl" alt="product-image">
+        </a>
+    </router-link>
     <div class="description">
         <span class="product-name">{{ title }}</span>
-        <span class="product-price">{{ price }}</span>
-        <span class="product-status">{{ status }}</span>
-        <input type="number" name="" id="" :ref="id">
-        <button @click="addProductsToCart(id)">add to cart</button>
-        <button @click="this.$store.commit('increment', 1) ">add to cart Mutation</button>
-        <button @click="this.$store.dispatch('increment', 1) ">add to cart Action</button>
+        <span class="product-price">{{ vnd(price) }}</span>
+        <div class="product-status">
+            <button @click="addProductsToCart()">
+                <img src="img/addtocart.svg" />
+            </button>
+            <span class="product-status">{{ checkStatusProduct }}</span>
+        </div>
+
     </div>
 </div>

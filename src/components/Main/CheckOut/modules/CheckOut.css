@@ -1,0 +1,29 @@
+.check-out{
+    display: inline-block;
+    position: relative;
+    width: calc(100% - 270px);
+    font-size: 16px;
+}
+.list-product{
+    width: 100%;
+}
+.checkout-header {
+    border-bottom: 3px solid #EF233C;
+    overflow: auto;
+}
+.checkout-header .left, .right{
+    float: left;
+    height: 35px;
+}
+.checkout-header h2 {
+    height: 35px;
+    float: left;
+    min-width: 132px;
+    text-align: left;
+    padding-top: 8px;
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: normal;
+    color: white;
+    background-color: #EF233C;
+}

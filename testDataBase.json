@@ -10,5 +10,105 @@
         "MÁY IN",
         "THIẾT BỊ NGOẠI VI",
         "BÀN GHẾ GAMMING"
+    ],
+    "products": [
+        {
+            "id": "1",
+            "title": "Card mạng không dây USB TP-Link TL-WN725N Wireless",
+            "thumbnailUrl": "img/sanpham1.jfif",
+            "quanity": "3",
+            "price": "18000000"
+        },
+        {
+            "id": "2",
+            "title": "Laptop Dell Inspiron 14 7425 2-in-1 (AMD Ryzen 5-5625U/Ram 8G/SSD 512G/ 14'' FHD)",
+            "thumbnailUrl": "img/sanpham3.jfif",
+            "quanity": "3",
+            "price": "16000000"
+        },
+        {
+            "id": "3",
+            "title": "Card mạng không dây UddddddddddddddddddddddddSB TP-Link TL-WN725N Wireless",
+            "thumbnailUrl": "img/sanpham4.jfif",
+            "quanity": "3",
+            "price": "18000000"
+        },
+        {
+            "id": "4",
+            "title": "Laptop Dell Inspiron 14 7425 27896545-1 (AMD Ryzen 5-5625U/Ram 8G/SSD 512G/ 14'' FHD)",
+            "thumbnailUrl": "img/sanpham2.jpg",
+            "quanity": "3",
+            "price": "18000000"
+        },
+        {
+            "id": "5",
+            "title": "Card mạng không dây bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb USB TP-Link TL-WN725N Wireless",
+            "thumbnailUrl": "img/sanpham5.jpg",
+            "quanity": "3",
+            "price": "18000000"
+        },
+        {
+            "id": "6",
+            "title": "Laptop Dell Inspiron 14 7425 2-in-ffffffffffff1 (AMD Ryzen 5-5625U/Ram 8G/SSD 512G/ 14'' FHD)",
+            "thumbnailUrl": "img/sanpham6.jpg",
+            "quanity": "12",
+            "price": "18000000"
+        },
+        {
+            "id": "7",
+            "title": "Card mạng không dây USB TP-Link TL-WN725N Wirelesssssssssssssss",
+            "thumbnailUrl": "img/sanpham7.jpg",
+            "quanity": "12",
+            "price": "18000000"
+        },
+        {
+            "id": "8",
+            "title": "Laptop Dell Inspiron 14 7425sssssssssssssss 2-in-1 (AMD Ryzen 5-5625U/Ram 8G/SSD 512G/ 14'' FHD)",
+            "thumbnailUrl": "img/sanpham5.jpg",
+            "quanity": "12",
+            "price": "16000000"
+        },
+        {
+            "id": "9",
+            "title": "Card mạng không dây UddddddddeeeeeeeeeeddddddSB TP-Link TL-WN725N Wireless",
+            "thumbnailUrl": "img/sanpham6.jpg",
+            "quanity": "3",
+            "price": "18000000"
+        },
+        {
+            "id": "10",
+            "title": "Laptop Dell Inspiron 14 7425 2789654888888885-1 (AMD Ryzen 5-5625U/Ram 8G/SSD 512G/ 14'' FHD)",
+            "thumbnailUrl": "img/sanpham7.jpg",
+            "quanity": "3",
+            "price": "18000000"
+        },
+        {
+            "id": "11",
+            "title": "Card mạng không dây bbbbbbbbbbbbbbbbbbbbbbbaaaabbbbbbbbbbbbb USB TP-Link TL-WN725N Wireless",
+            "thumbnailUrl": "img/sanpham1.jfif",
+            "quanity": "3",
+            "price": "18000000"
+        },
+        {
+            "id": "12",
+            "title": "Laptop Dell Inspiron 14 7425 2-in-fffffffffffffffhhhhhfff1 (AMD Ryzen 5-5625U/Ram 8G/SSD 512G/ 14'' FHD)",
+            "thumbnailUrl": "img/sanpham3.jfif",
+            "quanity": "3",
+            "price": "18000000"
+        }
+    ],
+    "hotProducts": [
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "newProducts": [
+        6,
+        7,
+        9,
+        4,
+        5
     ]
 }

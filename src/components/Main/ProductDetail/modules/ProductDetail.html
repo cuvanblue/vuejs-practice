@@ -1,0 +1,84 @@
+<div class="detail">
+    <div class="product-overview">
+        <div class="left-overview">
+            <img :src="product.thumbnailUrl" alt="" class="main-picture">
+            <div class="gallery">
+                <img class="gallery-item" src="" alt="">
+                <img class="gallery-item" src="" alt="">
+                <img class="gallery-item" src="" alt="">
+                <img class="gallery-item" src="" alt="">
+                <img class="gallery-item" src="" alt="">
+            </div>
+        </div>
+        <div class="right-overview">
+            <h4>{{product.title}}</h4>
+            <div class="brand-id">
+                <span>Thương hiệu: <span class="brand-name">{{product.brand}}</span></span>
+                <span>Mã sản phẩm: {{product.id}}</span>
+            </div>
+            <p>Giá bán: <span class="price-number">{{productPrice}}</span></p>
+            <p class="specs"></p>
+            <!-- markdown -->
+            <div v-if="product.quanity > 0" class="action">
+                <div class="change-amount">
+                    <button class="decrease" @click="changeAmount(-1)">-</button>
+                    <input type="number" min="0" :max="product.quanity" ref="amountDetailProduct" value="1">
+                    <button class="increase" @click="changeAmount(1)">+</button>
+                </div>
+                <button class="add-cart">Thêm vào giỏ hàng</button>
+                <button class="buy-instance">Đặt hàng</button>
+            </div>
+            <div v-if="product.quanity = 0" class="action">
+                Hết hàng
+            </div>
+            <div class="support-infor">
+                <div class="contact-infor">
+                    <div class="contact-item">
+                        <img src="img/phonecontact.png" alt="icon">
+                        <span style="font-weight: 600; font-size: 1.5em;">0705043200</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="img/mailcontact.png" alt="icon">
+                        <span>cuvankhoa.dev@gmail.com</span>
+                    </div>
+                </div>
+                <div class="promise">
+                    <div class="promise-item">
+                        <img src="img/checkbox.png" alt="checkbox-icon">
+                        <span>Hỗ trợ cài đặt driver, phần mềm qua Zalo Video, TeamView</span>
+                    </div>
+                    <div class="promise-item">
+                        <img src="img/checkbox.png" alt="checkbox-icon">
+                        <span>Ship nội thành Lạng Sơn (miễn phí)</span>
+                    </div>
+                    <div class="promise-item">
+                        <img src="img/checkbox.png" alt="checkbox-icon">
+                        <span>Ship COD toàn quốc: 24h-72h (có ship hỏa tốc), ship qua nhà xe</span>
+                    </div>
+                    <div class="promise-item">
+                        <img src="img/checkbox.png" alt="checkbox-icon">
+                        <span>Địa chỉ: Số 386 đường Bà Triệu, p. Vĩnh Trại, tp. Lạng Sơn, tỉnh Lạng Sơn</span>
+                    </div>
+                    <div class="promise-item">
+                        <img src="img/checkbox.png" alt="checkbox-icon">
+                        <span>Thời gian làm việc: Tất cả các ngày trong tuần (7h45 AM - 21h00 PM )</span>
+                    </div>
+                </div>
+                <img class="buy-guide" src="img/buyguide.png" alt="">
+                <p>Danh mục:<span></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        <div class="description-header">
+            <img class="left" src="img/left-bg-heading.png" alt="left-bg-heading">
+            <h2><strong>MÔ TẢ SẢN PHẨM</strong></h2>
+            <img class="right" src="img/right-bg-heading.png" alt="red-triangle">
+        </div>
+        <div class="description-text">
+            <p>
+                <!-- markdown -->
+            </p>
+        </div>
+    </div>
+</div>

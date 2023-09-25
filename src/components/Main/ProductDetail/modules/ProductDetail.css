@@ -1,0 +1,129 @@
+.detail {
+    display: inline-block;
+    position: relative;
+    width: calc(100% - 270px);
+    font-size: 16px;
+}
+.product-overview{
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+}
+.left-overview{
+    width: 40%;
+}
+.right-overview{
+    width: 58%;
+}
+.right-overview h4{
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #333;
+    line-height: 30px;
+    font-weight: 700;
+}
+.brand-name{
+    font-weight: 700;
+    margin-right: 20%;
+}
+.price-number{
+    margin-left : 20px;
+    color: #ef0000;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.specs{
+    margin: 15px 0;
+}
+.action{
+    display: flex;
+    margin: 15px 0;
+}
+.change-amount .decrease{
+    height: 40px;
+    border: 1px solid #ccc;
+    border-right: 0;
+    padding: 0 8px;
+    float: left;
+    line-height: 40px;
+    border-top-left-radius: 15px;
+    cursor: pointer;
+    border-bottom-left-radius: 15px;
+}
+.change-amount input{
+    float: left;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.change-amount .increase{
+    float: left;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-left: 0;
+    padding: 0 8px;
+    line-height: 40px;
+    border-top-right-radius: 15px;
+    cursor: pointer;
+    border-bottom-right-radius: 15px;
+}
+.add-cart, .buy-instance{
+    font-size: 1em;
+    padding: 12px 20px;
+    background-color: #ef233c;
+    border-radius: 17px;
+    border: 0;
+    color: #fff;
+    text-transform: uppercase;
+    margin-left: 5px;
+}
+.contact-infor{
+    display: flex;
+    justify-content: space-between;
+}
+.contact-item{
+    font-size: 1em;
+    display:flex;
+    align-items: center;
+}
+.contact-item span{
+    margin-left: 15px;
+}
+.promise{
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 15px 15px;
+}
+.promise-item span{
+    font-family: segoe ui,Frutiger,frutiger linotype,dejavu sans,helvetica neue,Arial,sans-serif;
+    margin-left: 5px;
+    font-size: 0.9em;
+}
+.buy-guide{
+    width: 100%;
+}
+.description-header {
+    background-color: #F1F1F1;
+    border-bottom: 3px solid #EF233C;
+    overflow: auto;
+}
+.description-header .left, .right{
+    float: left;
+    height: 35px;
+}
+.description-header h2 {
+    height: 35px;
+    float: left;
+    min-width: 132px;
+    text-align: left;
+    padding-top: 8px;
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: normal;
+    color: white;
+    background-color: #EF233C;
+}
+
+

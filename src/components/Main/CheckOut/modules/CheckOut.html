@@ -1,0 +1,73 @@
+<div class="check-out">
+    <div class="checkout-header">
+        <img class="left" src="img/left-bg-heading.png" alt="left-bg-heading">
+        <h2><strong>MÔ TẢ SẢN PHẨM</strong></h2>
+        <img class="right" src="img/right-bg-heading.png" alt="red-triangle">
+    </div>
+    <div class="main">
+        <form action="">
+            <div class="infor">
+                <div class="infor-header">THÔNG TIN MUA HÀNG</div>
+                <div class="infor-field">
+                    <p>Họ và tên</p>
+                    <input type="text" placeholder="Họ và tên">
+                </div>
+                <div class="infor-field">
+                    <p>Địa chỉ </p>
+                    <input type="text" placeholder="Địa chỉ ">
+                </div>
+                <div class="infor-field">
+                    <p>Số điện thoại</p>
+                    <input type="text" placeholder="Số điện thoại">
+                </div>
+                <div class="infor-field">
+                    <p>Email ( tùy chọn)</p>
+                    <input type="email" placeholder="Email">
+                </div>
+            </div>
+            <div class="payment-method">
+                <div class="infor-header">THÔNG TIN MUA HÀNG</div>
+                <div class="infor-field">
+                    <input id="payment-method-cod" type="radio">
+                    <label for="payment-method-cod">Nhận hàng thanh toán tiền tại nhà Ship COD</label>
+                    <p>Trả tiền mặt khi nhận hàng</p>
+                </div>
+                <div class="infor-field">
+                    <input id="payment-method-banking" type="radio">
+                    <label for="payment-method-banking">Chuyển khoản ngân hàng</label>
+                    <p>…………………………………………..
+                        Tài khoản Sieuthimaytinhlangson.com
+                        …………………………………………..
+                        Ngân hàng Quân Đội MB
+                        Chủ TK: Nguyễn Văn Lâm
+                        Số TK: 5150 168 9999 68
+                        Chi nhánh Lạng Sơn</p>
+                </div>
+                <div class="infor-header">THÔNG TIN MUA HÀNG</div>
+                <div class="infor-field">
+                    <label for="order-comment">Ghi chú đơn hàng (tuỳ chọn)</label>
+                    <textarea id="order-comment" placeholder="Ghi chú đơn hàng" rows="5" cols="50"></textarea>
+                </div>
+            </div>
+            <div class="detail">
+                <div class="infor-header">ĐƠN HÀNG CỦA BẠN</div>
+                <div class="detail-main">
+                    <table>
+                        <tbody>
+                            <tr v-for="product in cartProducts" :title="product.title" :price="product.price"
+                                :thumbnailUrl="product.thumbnailUrl" :quanity="product.quanity" :id="product.id">
+                                <td><img :src="product.thumbnailUrl" alt="cart product"></td>
+                                <td>{{product.title}}</td>
+                                <td><input type="number" :value="product.count + 'sp'" min="0" readonly></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Tạm tính:{{getSumPrice}}</p>
+                    <p>Thành tiền:{{getSumPrice}}</p>
+                    <button @click="checkOut()">Thanh toán</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>

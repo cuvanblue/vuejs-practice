@@ -1,0 +1,141 @@
+.no-product-cart * {
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+}
+.no-product-cart a{
+    display: block;
+}
+.home-button{
+    font-size: 0.9em;
+    padding: 12px 20px;
+    background-color: #ef233c;
+    border-radius: 17px;
+    border: 0;
+    color: #fff;
+    text-transform: uppercase;
+    margin-left: 5px;
+}
+.check-cart{
+    display: inline-block;
+    position: relative;
+    width: calc(100% - 270px);
+    font-size: 16px;
+}
+.list-product{
+    width: 100%;
+}
+.checkcart-header {
+    border-bottom: 3px solid #EF233C;
+    overflow: auto;
+}
+.checkcart-header .left, .right{
+    float: left;
+    height: 35px;
+}
+.checkcart-header h2 {
+    height: 35px;
+    float: left;
+    min-width: 132px;
+    text-align: left;
+    padding-top: 8px;
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: normal;
+    color: white;
+    background-color: #EF233C;
+}
+.check-cart-product-remove{
+    width: 50px;
+    text-align: center;
+}
+.check-cart-product-remove button{
+    padding: 0px 9px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    font-size: 2em;
+    color: #EF233C;
+}
+.check-cart-product-remove button:hover{
+    background-color: #EF233C;
+    color: white;
+}
+.check-cart-product-thumbnail{
+    width: 80px;
+}
+.check-cart-product-thumbnail img{
+    max-width: 80%;
+    margin: 0 auto ;
+
+}
+.check-cart-product-title{
+
+}
+.check-cart-product-price{
+    width: 120px;
+}
+.check-cart-product-quanity{
+    width: 130px;
+}
+.check-cart-product-quanity input{
+    text-align: center;
+    float: left;
+    height: 30px;
+    width: 30%;
+    padding: 5px 0 5px 5px;
+}.check-cart-product-quanity button{
+    float: left;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    font-weight: 700;
+    width: 20%;
+    height: 30px;
+}
+.check-cart-product-sumary{
+    width: 120px;
+    font-weight: 600;
+}
+table{
+    border: 1px solid #ccc;
+    border-collapse: collapse; 
+    text-align: center;
+    vertical-align:middle;
+}
+table td{
+    padding: 5px 0;
+    display: table-cell;
+    vertical-align: inherit;
+}
+table thead td{
+    font-weight: 600;
+}
+table tr{
+    border-bottom: 1px solid #ccc;
+}
+.sumary{
+    margin-top: 20px;
+    width: 40%;
+    float: right;
+    
+}
+.sumary span{
+    display: inline-block;
+    margin: 10px 30px 10px 0;
+    font-weight: 600;
+}
+.sumary h4{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.sumary a{
+    font-size: 1.5em;
+    text-align: center;
+    display: block;
+    width: 100%;
+    background-color: #ef233c;
+    color: white;
+    padding: 10px 0;
+}

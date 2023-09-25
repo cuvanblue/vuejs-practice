@@ -3,32 +3,45 @@ import { mapState, mapMutations, mapActions } from 'vuex';
 export default {
     data() {
         return {
-
+            quanityState: 0
         }
     },
     setup() {
+    },
+    mounted() {
+        this.quanityState = parseInt(this.quanity);
     },
     props: {
         id: String,
         title: String,
         thumbnailUrl: String,
         price: String,
-        status: String
+        quanity: String
     },
     computed: {
-
+        checkStatusProduct() {
+            return this.quanityState > 0 ? "Sẵn hàng" : "Hết hàng";
+        }
     },
     methods: {
-        addProductsToCart(id) {
-            this.incrementMutation(parseInt(id));
-            console.log('toi duoc goi' + id);
+        addProductsToCart() {
+
+            if (this.quanityState > 0) {
+                this.addToCartAction({ id: this.id });
+                this.quanityState--;
+            }
+            else alert('Sản phẩm này đã hết hàng');
         },
-        ...mapMutations({
-            incrementMutation: 'increment'
-        }),
         ...mapActions({
-            incrementAction: 'increment'
-        })
+            addToCartAction: 'addToCartAction'
+        }),
+        vnd(price) {
+            const VND = new Intl.NumberFormat('vi-VN', {
+                style: 'currency',
+                currency: 'VND',
+            });
+            return VND.format(price);
+        }
     }
 
 }

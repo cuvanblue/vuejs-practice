@@ -18,8 +18,12 @@ export default {
     },
     computed: {
         ...mapState(
-            ['cartProductsCount']
+            ["cart"]
         ),
+        // cach 2
+        // ...mapState({
+        //     cartCount: 'cartProductsCount'
+        // })
 
     }
 }

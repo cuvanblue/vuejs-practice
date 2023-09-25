@@ -1,0 +1,49 @@
+<div class="main-container">
+    <div class="main-banner">
+        <div class="image-container">
+            <img id="banner-1" src="img/main-banner.png" alt="main-banner">
+            <img id="banner-2" class="hidden-banner" src="img/main-banner1.png" alt="main-banner">
+            <img id="banner-3" class="hidden-banner" src="img/main-banner2.png" alt="main-banner">
+        </div>
+        <button onclick="" class="left-slide">
+        </button>
+        <button onclick="" class="right-slide">
+        </button>
+    </div>
+    <div class="list-product-container">
+        <!-- Sản phẩm mới, hot -->
+        <div class="list-product" style="position: relative;">
+            <div class="list-product-header" style="border: none;justify-content: space-between;">
+                <div>
+                    <button class="new-product-button" onclick="showHotNewMenu('new');">SẢN PHẨM
+                        MỚI</button>
+                    <button class="hot-product-button" onclick="showHotNewMenu('hot');">SẢN PHẨM
+                        HOT</button>
+                </div>
+                <a class="view-all-link">
+                    Xem tất cả
+                </a>
+            </div>
+            <div class="products product-new">
+                <Product v-for="product in newProducts" :title="product.title" :price="product.price"
+                    :thumbnailUrl="product.url" :quanity="product.quanity" :id="product.id" />
+            </div>
+            <div class="products product-hot" style="opacity: 0;">
+                <Product v-for="product in hotProducts" :title="product.title" :price="product.price"
+                    :thumbnailUrl="product.url" :quanity="product.quanity" :id="product.id" />
+            </div>
+        </div>
+        <!-- Thiết bị mạng -->
+        <div class="list-product">
+            <div class="description-header">
+                <img class="left" src="img/left-bg-heading.png" alt="left-bg-heading">
+                <h2><strong>THIẾT BỊ MẠNG</strong></h2>
+                <img class="right" src="img/right-bg-heading.png" alt="red-triangle">
+            </div>
+            <div class="products">
+                <Product v-for="product in allProducts" :title="product.title" :price="product.price"
+                    :thumbnailUrl="product.url" :quanity="product.quanity" :id="product.id" />
+            </div>
+        </div>
+    </div>
+</div>

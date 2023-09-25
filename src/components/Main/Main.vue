@@ -2,7 +2,6 @@
 import CategoryMenuRow from './CategoryMenuRow.vue';
 import AsideTitle from './AsideTitle.vue';
 import BestSellerItem from './BestSellerItem.vue';
-import Product from './Product/Product.vue';
 import testDataBase from '../../../testDataBase.json';
 import { onBeforeMount, onMounted, onRenderTracked } from 'vue';
 
@@ -142,87 +141,9 @@ import { onBeforeMount, onMounted, onRenderTracked } from 'vue';
                     </div>
                 </div>
             </div>
-            <div class="main-container">
-                <div class="main-banner">
-                    <div class="image-container">
-                        <img id="banner-1" src="img/main-banner.png" alt="main-banner">
-                        <img id="banner-2" class="hidden-banner" src="img/main-banner1.png" alt="main-banner">
-                        <img id="banner-3" class="hidden-banner" src="img/main-banner2.png" alt="main-banner">
-                    </div>
-                    <button onclick="goToBanner(-1,false)" class="left-slide">
-                    </button>
-                    <button onclick="goToBanner(1,false)" class="right-slide">
-                    </button>
-                </div>
-                <div class="list-product-container">
-                    <!-- Sản phẩm mới, hot -->
-                    <div class="list-product" style="position: relative;">
-                        <div class="list-product-header" style="border: none;justify-content: space-between;">
-                            <div>
-                                <button class="new-product-button" onclick="showHotNewMenu('new');">SẢN PHẨM
-                                    MỚI</button>
-                                <button class="hot-product-button" onclick="showHotNewMenu('hot');">SẢN PHẨM
-                                    HOT</button>
-                            </div>
-                            <a class="view-all-link">
-                                Xem tất cả
-                            </a>
-                        </div>
-                        <div class="products product-new">
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="1" />
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="2" />
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="3" />
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="4" />
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="5" />
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="6" />
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="7" />
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="8" />
-                        </div>
-                        <div class="products product-hot" style="opacity: 0;">
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc1.jfif" status="Sẵn hàng" id="9" />
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc3.jfif" status="Sẵn hàng" id="10" />
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc1.jfif" status="Sẵn hàng" id="11" />
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="12" />
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="13" />
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="14" />
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/lkpc2.jfif" status="Sẵn hàng" id="15" />
-                        </div>
-                    </div>
-                    <!-- Thiết bị mạng -->
-                    <div class="list-product">
-                        <div class="list-product-header">
-                            <img class="left" src="img/left-bg-heading.png" alt="left-bg-heading">
-                            <h2><strong>THIẾT BỊ MẠNG</strong></h2>
-                            <img class="right" src="img/right-bg-heading.png" alt="red-triangle">
-                        </div>
-                        <div class="products">
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/sanpham1.jfif" status="Sẵn hàng" id="16" />
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/sanpham1.jfif" status="Sẵn hàng" id="17" />
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/sanpham1.jfif" status="Sẵn hàng" id="18" />
-                            <Product title="Card mạng không dây USB TP-Link TL-WN725N Wireless" price="18,000,000 đ"
-                                thumbnailUrl="img/sanpham1.jfif" status="Sẵn hàng" id="19" />
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <router-view>
+
+            </router-view>
         </div>
         <div class="bottom-main">
             <div class="commits">
@@ -407,139 +328,7 @@ let showHotNewMenu = (type) => {
     flex-direction: column;
 }
 
-.main-container {
-    display: inline-block;
-    position: relative;
-    width: calc(100% - 270px);
-}
 
-.main-banner {
-    position: relative;
-    ;
-}
-
-.main-banner,
-.main-banner img {
-    width: 100%;
-    -webkit-transition: opacity 1s ease-out;
-    -moz-transition: opacity 1s ease-out;
-    -ms-transition: opacity 1s ease-out;
-    -o-transition: opacity 1s ease-out;
-    transition: opacity 1s ease-out;
-}
-
-.hidden-banner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-}
-
-.main-banner button {
-    position: absolute;
-    top: calc(50% - 25px);
-    width: 5%;
-    height: 50px;
-    background-color: transparent;
-    border: none;
-    background-image: url('../img/icon-back.png');
-    background-position: center;
-    background-size: cover;
-    display: block;
-    margin: 8px;
-}
-
-.left-slide {
-    left: 0;
-}
-
-.right-slide {
-    transform: rotate(180deg);
-    right: 0;
-}
-
-.list-product-container {
-    margin-top: 20px;
-}
-
-.list-product {
-    margin-top: 10px;
-}
-
-.list-product-header {
-    background-color: #F1F1F1;
-    border-bottom: 3px solid #EF233C;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.list-product-header h2 {
-    min-width: 132px;
-    text-align: left;
-    margin: 0;
-    padding: 12px 0 9px 0;
-    font-size: 1.6em;
-    font-weight: normal;
-    color: white;
-    background-color: #EF233C;
-}
-
-.list-product-header button {
-    font-size: 1.4em;
-    padding: 12px 15px;
-    border: none;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom: 2px solid #EF233C;
-    cursor: pointer;
-}
-
-.new-product-button {
-    color: white;
-    background-color: #EF233C;
-    margin-right: 3px;
-}
-
-.hot-product-button {
-    color: black;
-    background-color: transparent;
-}
-
-.hot-product-button:hover {
-    color: white;
-    background-color: #EF233C;
-}
-
-.view-all-link {
-    margin-right: 10px;
-    color: grey;
-    font-size: 1.2em;
-}
-
-.list-product-header img {
-    height: calc(1.6em + 23px);
-}
-
-.product-hot,
-.product-new {}
-
-.product-hot {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.products {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-right: none;
-    border-bottom: none;
-}
 
 /* bottom main */
 .bottom-main {
