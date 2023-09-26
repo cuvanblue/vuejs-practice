@@ -1,7 +1,6 @@
 .product {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     width: calc(25% - 1px);
     background-color: white;
     border-right: 1px solid #ccc;
@@ -13,6 +12,9 @@
     width: 85%;
     margin: 5px 7.5%;
     text-align: center;
+    height: calc(100% - 105px);
+    display: flex;
+    align-items: center;
 }
 
 .thumbnail {
@@ -24,13 +26,12 @@
 .product span {
     display: block;
     width: 85%;
-    margin: 5px 7.5%;
+    margin: 0  7.5%;
 }
 
 .product-name {
     font-size: 1.6em;
     text-align: left;
-    margin-top: 15px !important;
     line-height: 1.25;
     height: 40px;
     overflow: hidden;
@@ -43,7 +44,7 @@
     text-align: right;
 }
 .product-status{
-    margin: 5px 7.5%;
+    margin: 0 7.5%;
     width: 85%;
     display: flex;
     justify-content: space-between;
@@ -58,6 +59,7 @@
 }
 
 .product-status button{
+    padding: 0;
     background-color: transparent;
     border:  none;
     cursor: pointer;
@@ -65,4 +67,7 @@
 .product-status img{
     width: 30px;
     height: auto;
+}
+.description{
+    height: 105px;
 }

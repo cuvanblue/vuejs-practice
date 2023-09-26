@@ -23,23 +23,27 @@
             </thead>
             <tbody>
                 <tr v-for="product in cartProducts" :title="product.title" :price="product.price"
-                    :thumbnailUrl="product.thumbnailUrl" :quanity="product.quanity" :id="product.id">
-                    <td class="check-cart-product-remove"><button @click="removeProduct(product.id)">×</button></td>
-                    <td class="check-cart-product-thumbnail"><img :src="product.thumbnailUrl" alt="cart product"></td>
+                    :thumbnailUrl="product.url" :quanity="product.quanity" :id="product.product_id">
+                    <td class="check-cart-product-remove"><button @click="removeProduct(product.product_id)">×</button>
+                    </td>
+                    <td class="check-cart-product-thumbnail"><img :src="product.url" alt="cart product"></td>
                     <td class="check-cart-product-title">{{product.title}}</td>
                     <td class="check-cart-product-price">{{vnd(product.price)}}</td>
                     <td class="check-cart-product-quanity">
-                        <button @click="changeAmountProducts(product.id, -1)">-</button>
-                        <input type="number" :value="product.count" min="0" readonly>
-                        <button @click="changeAmountProducts(product.id, 1)">+</button>
+                        <button v-if="product.countInCart <= 1" @click="changeAmountProducts(product.product_id, -1)"
+                            disabled>-</button>
+                        <button v-if="product.countInCart >1"
+                            @click="changeAmountProducts(product.product_id, -1)">-</button>
+                        <input type="number" :value="product.countInCart" min="0" readonly>
+                        <button @click="changeAmountProducts(product.product_id, 1)">+</button>
                     </td>
-                    <td class="check-cart-product-sumary">{{vnd(product.sumary)}}</td>
+                    <td class="check-cart-product-sumary">{{vnd(product.checkOutSumary)}}</td>
                 </tr>
             </tbody>
         </table>
         <div class="sumary">
             <h4>Tổng</h4>
-            <div style="border: 1px solid #ccc; margin-bottom: 10px;">
+            <div style="border: 1px solid #ccc; margin-bottom: 10px; padding-left: 15px;">
                 <span>Tổng:</span>
                 <span>{{vnd(getSumPrice)}}</span>
             </div>

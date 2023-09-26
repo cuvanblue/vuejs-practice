@@ -354,7 +354,9 @@ let showHotNewMenu = (type) => {
     width: calc(25% - 13.5px);
 }
 
-.commit-icon {}
+.commit-icon {
+    max-height: 100%;
+}
 
 .commit div {
     width: calc(100% - 50px);

@@ -12,6 +12,14 @@
 .left-overview{
     width: 40%;
 }
+.gallery{
+    margin-top: 10px;
+}
+.gallery-item{
+    display: inline-block;
+    max-width: 15%;
+    margin-right: 2%;
+}
 .right-overview{
     width: 58%;
 }
@@ -103,6 +111,9 @@
 }
 .buy-guide{
     width: 100%;
+}
+.category-note{
+    margin: 5px 0;
 }
 .description-header {
     background-color: #F1F1F1;

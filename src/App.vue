@@ -25,3 +25,6 @@ import Main from './components/Main/Main.vue';
   margin-top: 20px;
 }
 </style>
+
+<script>
+</script>

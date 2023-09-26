@@ -12,11 +12,11 @@ export default {
         this.quanityState = parseInt(this.quanity);
     },
     props: {
-        id: String,
+        id: Number,
         title: String,
         thumbnailUrl: String,
         price: String,
-        quanity: String
+        quanity: Number
     },
     computed: {
         checkStatusProduct() {

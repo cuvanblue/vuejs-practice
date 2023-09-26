@@ -1,8 +1,6 @@
 <div class="product">
-    <router-link :to="'/product-detail/' + id">
-        <a class="product-thumbnail">
-            <img class="thumbnail" :src="thumbnailUrl" alt="product-image">
-        </a>
+    <router-link :to="'/product-detail/' + id" class="product-thumbnail">
+        <img class="thumbnail" :src="thumbnailUrl" alt="product-image">
     </router-link>
     <div class="description">
         <span class="product-name">{{ title }}</span>

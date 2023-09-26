@@ -1,5 +1,4 @@
 import { mapState, mapMutations, mapActions } from 'vuex';
-import * as db from '../../../../../testDataBase.json';
 export default {
     data() {
         return {
@@ -21,7 +20,7 @@ export default {
         getSumPrice() {
             let s = 0;
             this.cart.productList.forEach(product => {
-                s += parseInt(product.sumary);
+                s += parseInt(product.checkOutSumary);
             });
             return s;
         }
@@ -31,15 +30,12 @@ export default {
             removeProductAction: 'removeProductAction'
         }),
         removeProduct(id) {
-            this.removeProductAction({ id: id });
+            if (window.confirm('Bạn có chắc chắn muốn xóa sản phẩm này không?')) {
+                this.removeProductAction({ id: id });
+            }
         },
         changeAmountProducts(id, increase) {
             this.changeAmountProductsAction({ id: id, increase: increase });
-        }, checkOut() {
-            alert("Bạn đã đặt hàng thành công! đơn hàng của bạn có giá trị " + this.getSumPrice);
-            this.cart.productList.forEach(product => {
-                this.removeProduct(product.id);
-            })
         },
         vnd(price) {
             const VND = new Intl.NumberFormat('vi-VN', {

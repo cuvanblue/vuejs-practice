@@ -1,13 +1,21 @@
 import { computed, ref, defineProps } from "vue";
 import { mapState, mapMutations, mapActions } from 'vuex';
-import * as db from '../../../../../testDataBase.json';
+import Markdown from 'vue3-markdown-it';
+import database from "@/database/database";
 export default {
     data() {
         return {
-
+            currentProduct: null,
+            images: null
         }
     },
+    async created() {
+        const data = await database.getDetailProduct(this.$route.params.id);
+        this.currentProduct = data.currentProduct;
+        this.images = data.images;
+    },
     components: {
+        Markdown,
     },
     setup() {
 
@@ -20,9 +28,13 @@ export default {
     },
     computed: {
         product() {
-            let id = this.$route.params.id;
-            const findProduct = db.products.find((product) => product.id === id);
-            return findProduct ? findProduct : false;
+            return this.currentProduct ? this.currentProduct : false;
+        },
+        productSpecs() {
+            return this.currentProduct.specification.slice(1, -1);
+        },
+        productDes() {
+            return this.currentProduct.description.slice(1, -1);
         },
         productPrice() {
             const VND = new Intl.NumberFormat('vi-VN', {
